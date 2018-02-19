@@ -1,0 +1,201 @@
+package  com/kaspersky/zeronights2017/nightwatcher;
+
+super class "\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF"
+	version 50:0
+{
+
+
+private static Method "\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF":"(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+	stack 5 locals 4
+{
+		getstatic	Field "\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF".a:"I";
+		istore_2;
+		new	class java/lang/StringBuilder;
+		dup;
+		getstatic	Field "\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF".q:"Ljava/lang/String;";
+		invokespecial	Method java/lang/StringBuilder."<init>":"(Ljava/lang/String;)V";
+		astore_3;
+	L15:
+		iload_2;
+		getstatic	Field "\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF".o:"I";
+		getstatic	Field "\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF".d:"I";
+		ishl;
+		getstatic	Field "\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF".d:"I";
+		imul;
+		if_icmpge	L67;
+		aload_3;
+		aload_0;
+		iload_2;
+		invokevirtual	Method java/lang/String.charAt:"(I)C";
+		aload_1;
+		iload_2;
+		aload_1;
+		invokevirtual	Method java/lang/String.length:"()I";
+		irem;
+		invokevirtual	Method java/lang/String.charAt:"(I)C";
+		ixor;
+		invokestatic	Method java/lang/String.valueOf:"(I)Ljava/lang/String;";
+		invokevirtual	Method java/lang/StringBuilder.append:"(Ljava/lang/String;)Ljava/lang/StringBuilder;";
+		pop;
+		iload_2;
+		getstatic	Field "\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF".n:"I";
+		getstatic	Field "\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF".f:"I";
+		ishr;
+		iadd;
+		istore_2;
+		goto	L15;
+	L67:
+		aload_3;
+		invokevirtual	Method java/lang/StringBuilder.toString:"()Ljava/lang/String;";
+		invokevirtual	Method java/lang/String.getBytes:"()[B";
+		invokestatic	Method "\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF"."\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF":"([B)Ljava/lang/String;";
+		areturn;
+}
+
+public static Method "\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF":"(Ljava/lang/String;)Ljava/lang/String;"
+	stack 5 locals 4
+{
+
+	try t0, t1;
+		getstatic	Field "\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF".r:"Ljava/lang/String;";
+		invokestatic	Method java/security/MessageDigest.getInstance:"(Ljava/lang/String;)Ljava/security/MessageDigest;";
+		astore_2;
+		new	class java/lang/StringBuilder;
+		astore_3;
+		aload_3;
+		aload_2;
+		aload_0;
+		getstatic	Field "\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF".s:"Ljava/lang/String;";
+		invokevirtual	Method java/lang/String.getBytes:"(Ljava/lang/String;)[B";
+		invokevirtual	Method java/security/MessageDigest.digest:"([B)[B";
+		arraylength;
+		invokespecial	Method java/lang/StringBuilder."<init>":"(I)V";
+	endtry t0, t1;
+
+		iconst_0;
+		istore_1;
+
+	try t2, t3;
+	L29:
+		iload_1;
+		aload_2;
+		aload_0;
+		getstatic	Field "\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF".s:"Ljava/lang/String;";
+		invokevirtual	Method java/lang/String.getBytes:"(Ljava/lang/String;)[B";
+		invokevirtual	Method java/security/MessageDigest.digest:"([B)[B";
+		arraylength;
+		if_icmpge	L109;
+		aload_3;
+		getstatic	Field "\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF".c:"Ljava/lang/String;";
+		aload_2;
+		aload_0;
+		getstatic	Field "\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF".s:"Ljava/lang/String;";
+		invokevirtual	Method java/lang/String.getBytes:"(Ljava/lang/String;)[B";
+		invokevirtual	Method java/security/MessageDigest.digest:"([B)[B";
+		iload_1;
+		baload;
+		getstatic	Field "\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF".f:"I";
+		ishr;
+		getstatic	Field "\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF".q:"I";
+		iand;
+		invokevirtual	Method java/lang/String.charAt:"(I)C";
+		invokevirtual	Method java/lang/StringBuilder.append:"(C)Ljava/lang/StringBuilder;";
+		getstatic	Field "\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF".c:"Ljava/lang/String;";
+		aload_2;
+		aload_0;
+		getstatic	Field "\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF".s:"Ljava/lang/String;";
+		invokevirtual	Method java/lang/String.getBytes:"(Ljava/lang/String;)[B";
+		invokevirtual	Method java/security/MessageDigest.digest:"([B)[B";
+		iload_1;
+		baload;
+		getstatic	Field "\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF".q:"I";
+		iand;
+		invokevirtual	Method java/lang/String.charAt:"(I)C";
+		invokevirtual	Method java/lang/StringBuilder.append:"(C)Ljava/lang/StringBuilder;";
+		pop;
+	endtry t2, t3;
+
+		iinc	1, 1;
+		goto	L29;
+
+	try t4, t5;
+	L109:
+		aload_3;
+		invokevirtual	Method java/lang/StringBuilder.toString:"()Ljava/lang/String;";
+		astore_0;
+	endtry t4, t5;
+
+	L114:
+		aload_0;
+		areturn;
+
+	catch t0 java/security/NoSuchAlgorithmException;
+	catch t2 java/security/NoSuchAlgorithmException;
+	catch t4 java/security/NoSuchAlgorithmException;
+		astore_0;
+	L117:
+		aload_0;
+		invokevirtual	Method java/lang/Exception.printStackTrace:"()V";
+		aconst_null;
+		astore_0;
+		goto	L114;
+	catch t1 java/io/UnsupportedEncodingException;
+	catch t3 java/io/UnsupportedEncodingException;
+	catch t5 java/io/UnsupportedEncodingException;
+		astore_0;
+		goto	L117;
+}
+
+public static Method "\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF":"(Ljava/lang/String;)Ljava/lang/String;"
+	stack 5 locals 4
+{
+		new	class java/lang/StringBuilder;
+		dup;
+		getstatic	Field "\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF".q:"Ljava/lang/String;";
+		invokespecial	Method java/lang/StringBuilder."<init>":"(Ljava/lang/String;)V";
+		astore_3;
+		getstatic	Field "\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF".a:"I";
+		istore_1;
+	L15:
+		iload_1;
+		getstatic	Field "\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF".p:"I";
+		getstatic	Field "\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF".d:"I";
+		ishl;
+		if_icmpge	L74;
+		iload_1;
+		getstatic	Field "\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF".f:"I";
+		ishl;
+		iload_1;
+		ior;
+		getstatic	Field "\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF".r:"I";
+		iload_1;
+		imul;
+		ishl;
+		getstatic	Field "\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF".u:"I";
+		irem;
+		getstatic	Field "\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF".t:"I";
+		irem;
+		istore_2;
+		aload_3;
+		getstatic	Field "\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF".a:"Ljava/lang/String;";
+		iload_2;
+		getstatic	Field "\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF".c:"I";
+		iload_2;
+		iadd;
+		invokevirtual	Method java/lang/String.substring:"(II)Ljava/lang/String;";
+		invokevirtual	Method java/lang/StringBuilder.append:"(Ljava/lang/String;)Ljava/lang/StringBuilder;";
+		pop;
+		iload_1;
+		getstatic	Field "\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF".m:"I";
+		iadd;
+		istore_1;
+		goto	L15;
+	L74:
+		aload_3;
+		invokevirtual	Method java/lang/StringBuilder.toString:"()Ljava/lang/String;";
+		aload_0;
+		invokestatic	Method "\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF":"(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;";
+		areturn;
+}
+
+} // end Class "com/kaspersky/zeronights2017/nightwatcher/\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF\uFEFF"
