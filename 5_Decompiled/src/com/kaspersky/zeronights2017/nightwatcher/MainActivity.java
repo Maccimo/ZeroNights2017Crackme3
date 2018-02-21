@@ -129,10 +129,6 @@ public class MainActivity extends Activity {
         this.getWindow().setFlags(1024, 1024);
         this.setContentView(0x7f09001b);
         Button var2 = (Button)this.findViewById(0x7f070021);
-        if ((new class_108(this)).method_946()) {
-            Toast.makeText(this, "Your Android device is rooted!", 1).show();
-            this.finish();
-        }
 
         var2.setOnClickListener(new OnClickListener() {
             public void onClick(View var1) {
