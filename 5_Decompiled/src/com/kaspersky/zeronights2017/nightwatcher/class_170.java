@@ -128,4 +128,35 @@ class class_170 {
 
         return new String(var2);
     }
+
+    public static void main(String... args) {
+
+        System.out.print("package com.kaspersky.zeronights2017.nightwatcher;\n\n");
+
+        System.out.print("public class class_170 {\n\n");
+
+        System.out.printf("    public static final String field_1350 = \"%s\";%n", field_1350.replaceAll("\n", "\\\\n"));
+        System.out.printf("    public static final String field_1351 = \"%s\";%n", field_1351);
+        System.out.printf("    public static final String field_1352 = \"%s\";%n", field_1352);
+        System.out.printf("    public static final String field_1353 = \"%s\";%n", field_1353);
+        System.out.printf("    public static final String field_1354 = \"%s\";%n", field_1354);
+        System.out.printf("    public static final String field_1355 = \"%s\";%n", field_1355);
+        System.out.printf("    public static final String field_1356 = \"%s\";%n", field_1356);
+        System.out.printf("    public static final String field_1357 = \"%s\";%n", field_1357);
+        System.out.printf("    public static final String field_1358 = \"%s\";%n", field_1358);
+        System.out.printf("    public static final String field_1359 = \"%s\";%n", field_1359);
+        System.out.printf("    public static final String field_1360 = \"%s\";%n", field_1360);
+        System.out.printf("    public static final String field_1361 = \"%s\";%n", field_1361);
+        System.out.printf("    public static final String field_1362 = \"%s\";%n", field_1362);
+        System.out.printf("    public static final String field_1363 = \"%s\";%n", field_1363);
+        System.out.printf("    public static final String field_1364 = \"%s\";%n", field_1364);
+        System.out.printf("    public static final String field_1365 = \"%s\";%n", field_1365);
+        System.out.printf("    public static final String field_1366 = \"%s\";%n", field_1366);
+        System.out.printf("    public static final String field_1367 = \"%s\";%n", field_1367);
+        System.out.printf("    public static final String field_1368 = \"%s\";%n", field_1368);
+
+        System.out.print("\n}\n\n");
+
+    }
+
 }
