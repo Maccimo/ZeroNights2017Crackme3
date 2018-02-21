@@ -20,9 +20,9 @@ import java.io.InputStream;
 
 public class MainActivity extends Activity {
     // $FF: renamed from: a android.widget.EditText
-    public static EditText field_1177;
+    public static EditText emailEditText;
     // $FF: renamed from: b android.widget.EditText
-    public static EditText field_1178;
+    public static EditText serialEditText;
     // $FF: renamed from: c java.lang.String
     public static String field_1179;
     // $FF: renamed from: d java.lang.String
@@ -37,7 +37,8 @@ public class MainActivity extends Activity {
 
     // $FF: renamed from: a () void
     private void method_1297() {
-        Bitmap var1 = BitmapFactory.decodeResource(this.getResources(), 2131099746);
+        // 0x7f060062 = type="drawable" name="owl"
+        Bitmap var1 = BitmapFactory.decodeResource(this.getResources(), 0x7f060062);
         TessBaseAPI var2;
         if (VERSION.SDK_INT > 19) {
             this.field_1180 = this.getFilesDir() + class_170.field_1354;
@@ -126,26 +127,26 @@ public class MainActivity extends Activity {
         super.onCreate(var1);
         this.requestWindowFeature(1);
         this.getWindow().setFlags(1024, 1024);
-        this.setContentView(2131296283);
-        Button var2 = (Button)this.findViewById(2131165217);
+        this.setContentView(0x7f09001b);
+        Button var2 = (Button)this.findViewById(0x7f070021);
         if ((new class_108(this)).method_946()) {
-            Toast.makeText(this, 2131361827, 1).show();
+            Toast.makeText(this, "Your Android device is rooted!", 1).show();
             this.finish();
         }
 
         var2.setOnClickListener(new OnClickListener() {
             public void onClick(View var1) {
-                MainActivity.field_1177 = (EditText)MainActivity.this.findViewById(2131165230);
-                MainActivity.field_1178 = (EditText)MainActivity.this.findViewById(2131165280);
+                MainActivity.emailEditText = (EditText)MainActivity.this.findViewById(0x7f07002e);
+                MainActivity.serialEditText = (EditText)MainActivity.this.findViewById(0x7f070060);
                 MainActivity.this.method_1297();
-                if (!MainActivity.field_1177.getText().toString().matches(class_170.field_1366) && !MainActivity.field_1178.getText().toString().toUpperCase().matches(class_170.field_1366)) {
+                if (!MainActivity.emailEditText.getText().toString().matches(class_170.field_1366) && !MainActivity.serialEditText.getText().toString().toUpperCase().matches(class_170.field_1366)) {
                     if (class_46.method_502()) {
-                        Toast.makeText(MainActivity.this, 2131361829, 1).show();
+                        Toast.makeText(MainActivity.this, "Congratulations! You did it!", 1).show();
                     } else {
-                        Toast.makeText(MainActivity.this, 2131361828, 1).show();
+                        Toast.makeText(MainActivity.this, "Login Failed.", 1).show();
                     }
                 } else {
-                    Toast.makeText(MainActivity.this, 2131361828, 1).show();
+                    Toast.makeText(MainActivity.this, "Login Failed.", 1).show();
                 }
 
             }
