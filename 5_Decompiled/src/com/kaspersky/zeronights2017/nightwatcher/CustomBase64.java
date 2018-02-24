@@ -1,7 +1,7 @@
 package com.kaspersky.zeronights2017.nightwatcher;
 
 // $FF: renamed from: com.kaspersky.zeronights2017.nightwatcher.﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿
-class class_87 {
+class CustomBase64 {
 
     public static final String ALPHABET = "ABCDEFGHIJKLONMPQRSTVUWXYZabcdefghijlkmnopqrstuvwxyz5193406782+/";
 

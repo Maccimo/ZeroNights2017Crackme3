@@ -42,7 +42,7 @@ public class MainActivity extends Activity {
 
     public MainActivity() {
         this.field_1180 = "";
-        this.field_1181 = class_87.decode(field_1353);
+        this.field_1181 = CustomBase64.decode(field_1353);
     }
 
     // $FF: renamed from: a () void
@@ -100,7 +100,7 @@ public class MainActivity extends Activity {
     private void method_1300(String var1) {
         try {
             StringBuilder var5 = new StringBuilder();
-            String var12 = var5.append(this.field_1180).append(this.field_1181).append(class_87.decode(var1)).toString();
+            String var12 = var5.append(this.field_1180).append(this.field_1181).append(CustomBase64.decode(var1)).toString();
             AssetManager var6 = this.getAssets();
             StringBuilder var7 = new StringBuilder();
             InputStream var9 = var6.open(var7.append(this.field_1181).append(var1).toString());
