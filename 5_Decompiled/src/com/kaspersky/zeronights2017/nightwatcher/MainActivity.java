@@ -99,11 +99,11 @@ public class MainActivity extends Activity {
             AssetManager assets = this.getAssets();
             InputStream inputStream = assets.open(this.field_1181 + resourceName);
             FileOutputStream outputStream = new FileOutputStream(var12);
-            byte[] bytes = new byte[class_44.field_391];
+            byte[] bytes = new byte[8192];
 
             while(true) {
                 int var3 = inputStream.read(bytes);
-                if (var3 == class_44.field_369) {
+                if (var3 == -1) {
                     outputStream.flush();
                     outputStream.close();
                     inputStream.close();
@@ -114,11 +114,11 @@ public class MainActivity extends Activity {
                     break;
                 }
 
-                for(int var2 = class_44.field_368; var2 < var3; ++var2) {
-                    bytes[var2] = (byte)(bytes[var2] ^ class_44.field_379);
+                for(int var2 = 0; var2 < var3; ++var2) {
+                    bytes[var2] = (byte)(bytes[var2] ^ 0x14);
                 }
 
-                outputStream.write(bytes, class_44.field_368, var3);
+                outputStream.write(bytes, 0, var3);
             }
         } catch (IOException var8) {
             var8.printStackTrace();

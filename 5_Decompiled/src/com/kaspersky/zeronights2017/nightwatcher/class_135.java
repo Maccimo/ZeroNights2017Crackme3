@@ -12,10 +12,10 @@ class class_135 {
 
     // $FF: renamed from: ﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿ (java.lang.String, java.lang.String) java.lang.String
     private static String method_1131(String var0, String var1) {
-        int var2 = class_44.field_368;
+        int var2 = 0;
 
         StringBuilder var3;
-        for(var3 = new StringBuilder(""); var2 < (class_44.field_382 << class_44.field_371) * class_44.field_371; var2 += class_44.field_381 >> class_44.field_373) {
+        for(var3 = new StringBuilder(""); var2 < (32 << 2) * 2; var2 += 20 >> 4) {
             var3.append(String.valueOf(var0.charAt(var2) ^ var1.charAt(var2 % var1.length())));
         }
 
@@ -29,7 +29,7 @@ class class_135 {
             StringBuilder var3 = new StringBuilder(var2.digest(var0.getBytes("UTF-8")).length);
 
             for(int var1 = 0; var1 < var2.digest(var0.getBytes("UTF-8")).length; ++var1) {
-                var3.append(HEX_DIGITS.charAt(var2.digest(var0.getBytes("UTF-8"))[var1] >> class_44.field_373 & class_44.field_384)).append(HEX_DIGITS.charAt(var2.digest(var0.getBytes("UTF-8"))[var1] & class_44.field_384));
+                var3.append(HEX_DIGITS.charAt(var2.digest(var0.getBytes("UTF-8"))[var1] >> 4 & 15)).append(HEX_DIGITS.charAt(var2.digest(var0.getBytes("UTF-8"))[var1] & 15));
             }
 
             var0 = var3.toString();
@@ -44,9 +44,9 @@ class class_135 {
     public static String method_1133(String var0) {
         StringBuilder var3 = new StringBuilder("");
 
-        for(int var1 = class_44.field_368; var1 < class_44.field_383 << class_44.field_371; var1 += class_44.field_380) {
-            int var2 = ((var1 << class_44.field_373 | var1) << class_44.field_385 * var1) % class_44.field_388 % class_44.field_387;
-            var3.append(LOREM_IPSUM.substring(var2, class_44.field_370 + var2));
+        for(int var1 = 0; var1 < 64 << 2; var1 += 1) {
+            int var2 = ((var1 << 4 | var1) << 240 * var1) % 2000000 % 2949;
+            var3.append(LOREM_IPSUM.substring(var2, 1 + var2));
         }
 
         return method_1131(var3.toString(), var0);
