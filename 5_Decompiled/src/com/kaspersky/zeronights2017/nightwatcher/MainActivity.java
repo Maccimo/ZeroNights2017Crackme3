@@ -20,14 +20,10 @@ import java.io.InputStream;
 
 public class MainActivity extends Activity {
 
-    public static final String field_1353 = "dGUzc9RhdGEv";
     public static final String field_1354 = "/whoami/";
     public static final String field_1355 = "who";
     public static final String field_1356 = "am";
     public static final String field_1357 = "i";
-    public static final String field_1358 = "d9hvLnRyYWkuZWRlYXRh";
-    public static final String field_1359 = "YW5udHJhaW0kZGRhdGE=";
-    public static final String field_1360 = "aS05cmFpbmUlZGF5YQ==";
 
     // $FF: renamed from: a android.widget.EditText
     public static EditText emailEditText;
@@ -42,7 +38,7 @@ public class MainActivity extends Activity {
 
     public MainActivity() {
         this.field_1180 = "";
-        this.field_1181 = CustomBase64.decode(field_1353);
+        this.field_1181 = "tessdata/";
     }
 
     // $FF: renamed from: a () void
@@ -53,30 +49,30 @@ public class MainActivity extends Activity {
         if (VERSION.SDK_INT > 19) {
             this.field_1180 = this.getFilesDir() + field_1354;
             var2 = new TessBaseAPI();
-            this.method_1299(new File(this.field_1180 + this.field_1181), field_1358, CustomBase64.decode(field_1358));
+            this.method_1299(new File(this.field_1180 + this.field_1181), "d9hvLnRyYWkuZWRlYXRh", "who.traineddata");
             var2.method_997(this.field_1180, field_1355);
             var2.method_996(var1);
             field_1179 = var2.method_995();
-            this.method_1299(new File(this.field_1180 + this.field_1181), field_1359, CustomBase64.decode(field_1359));
+            this.method_1299(new File(this.field_1180 + this.field_1181), "YW5udHJhaW0kZGRhdGE=", "am.traineddata");
             var2.method_997(this.field_1180, field_1356);
             var2.method_996(var1);
             field_1179 = field_1179 + var2.method_995();
-            this.method_1299(new File(this.field_1180 + this.field_1181), field_1360, CustomBase64.decode(field_1360));
+            this.method_1299(new File(this.field_1180 + this.field_1181), "aS05cmFpbmUlZGF5YQ==", "i.traineddata");
             var2.method_997(this.field_1180, field_1357);
             var2.method_996(var1);
             field_1179 = field_1179 + var2.method_995();
         } else {
             this.field_1180 = this.getFilesDir() + field_1354;
             var2 = new TessBaseAPI();
-            this.method_1299(new File(this.field_1180 + this.field_1181), field_1358, CustomBase64.decode(field_1358));
+            this.method_1299(new File(this.field_1180 + this.field_1181), "d9hvLnRyYWkuZWRlYXRh", "who.traineddata");
             var2.method_997(this.field_1180, field_1355);
             var2.method_996(var1);
             field_1179 = var2.method_995().split("\n")[0];
-            this.method_1299(new File(this.field_1180 + this.field_1181), field_1359, CustomBase64.decode(field_1359));
+            this.method_1299(new File(this.field_1180 + this.field_1181), "YW5udHJhaW0kZGRhdGE=", "am.traineddata");
             var2.method_997(this.field_1180, field_1356);
             var2.method_996(var1);
             field_1179 = field_1179 + var2.method_995().split("\n")[0];
-            this.method_1299(new File(this.field_1180 + this.field_1181), field_1360, CustomBase64.decode(field_1360));
+            this.method_1299(new File(this.field_1180 + this.field_1181), "aS05cmFpbmUlZGF5YQ==", "i.traineddata");
             var2.method_997(this.field_1180, field_1357);
             var2.method_996(var1);
             field_1179 = field_1179 + var2.method_995().split("\n")[0];

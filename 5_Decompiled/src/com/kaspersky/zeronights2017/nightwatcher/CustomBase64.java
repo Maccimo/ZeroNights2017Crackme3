@@ -42,37 +42,4 @@ class CustomBase64 {
         return var7.toString();
     }
 
-    // $FF: renamed from: ﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿ (java.lang.String) java.lang.String
-    public static String decode(String var0) {
-        String var3 = var0.replaceAll("[^" + ALPHABET + "=]", "");
-        if (var3.charAt(var3.length() - class_44.field_370) == '=') {
-            if (var3.charAt(var3.length() - class_44.field_371) == '=') {
-                var0 = "AA";
-            } else {
-                var0 = "A";
-            }
-        } else {
-            var0 = "";
-        }
-
-        StringBuilder var4 = new StringBuilder("");
-        var3 = var3.substring(class_44.field_368, var3.length() - var0.length()) + var0;
-
-        for(int var1 = class_44.field_368; var1 < var3.length(); var1 += class_44.field_373) {
-            int var2 = (ALPHABET.indexOf(var3.charAt(var1)) << class_44.field_378) + (ALPHABET.indexOf(var3.charAt(class_44.field_370 + var1)) << class_44.field_376) + (ALPHABET.indexOf(var3.charAt(class_44.field_371 + var1)) << class_44.field_374) + ALPHABET.indexOf(var3.charAt(class_44.field_372 + var1));
-            var4.append("").append((char)(var2 >>> class_44.field_377 & class_44.field_386)).append((char)(var2 >>> class_44.field_375 & class_44.field_386)).append((char)(var2 & class_44.field_386));
-        }
-
-        return var4.substring(class_44.field_368, var4.length() - var0.length());
-    }
-
-    public static void main(String... args) {
-
-    	System.out.printf("\"%s\"\t\"%s\"%n", "dGUzc9RhdGEv"        , decode("dGUzc9RhdGEv"        ));
-    	System.out.printf("\"%s\"\t\"%s\"%n", "d9hvLnRyYWkuZWRlYXRh", decode("d9hvLnRyYWkuZWRlYXRh"));
-    	System.out.printf("\"%s\"\t\"%s\"%n", "YW5udHJhaW0kZGRhdGE=", decode("YW5udHJhaW0kZGRhdGE="));
-    	System.out.printf("\"%s\"\t\"%s\"%n", "aS05cmFpbmUlZGF5YQ==", decode("aS05cmFpbmUlZGF5YQ=="));
-
-    }
-
 }
