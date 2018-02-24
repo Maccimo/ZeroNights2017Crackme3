@@ -19,6 +19,16 @@ import java.io.IOException;
 import java.io.InputStream;
 
 public class MainActivity extends Activity {
+
+    public static final String field_1353 = "dGUzc9RhdGEv";
+    public static final String field_1354 = "/whoami/";
+    public static final String field_1355 = "who";
+    public static final String field_1356 = "am";
+    public static final String field_1357 = "i";
+    public static final String field_1358 = "d9hvLnRyYWkuZWRlYXRh";
+    public static final String field_1359 = "YW5udHJhaW0kZGRhdGE=";
+    public static final String field_1360 = "aS05cmFpbmUlZGF5YQ==";
+
     // $FF: renamed from: a android.widget.EditText
     public static EditText emailEditText;
     // $FF: renamed from: b android.widget.EditText
@@ -31,8 +41,8 @@ public class MainActivity extends Activity {
     private final String field_1181;
 
     public MainActivity() {
-        this.field_1180 = class_170.field_1366;
-        this.field_1181 = class_87.method_802(class_170.field_1353);
+        this.field_1180 = "";
+        this.field_1181 = class_87.decode(field_1353);
     }
 
     // $FF: renamed from: a () void
@@ -41,33 +51,33 @@ public class MainActivity extends Activity {
         Bitmap var1 = BitmapFactory.decodeResource(this.getResources(), 0x7f060062);
         TessBaseAPI var2;
         if (VERSION.SDK_INT > 19) {
-            this.field_1180 = this.getFilesDir() + class_170.field_1354;
+            this.field_1180 = this.getFilesDir() + field_1354;
             var2 = new TessBaseAPI();
-            this.method_1299(new File(this.field_1180 + this.field_1181), class_170.field_1358);
-            var2.method_997(this.field_1180, class_170.field_1355);
+            this.method_1299(new File(this.field_1180 + this.field_1181), field_1358);
+            var2.method_997(this.field_1180, field_1355);
             var2.method_996(var1);
             field_1179 = var2.method_995();
-            this.method_1299(new File(this.field_1180 + this.field_1181), class_170.field_1359);
-            var2.method_997(this.field_1180, class_170.field_1356);
+            this.method_1299(new File(this.field_1180 + this.field_1181), field_1359);
+            var2.method_997(this.field_1180, field_1356);
             var2.method_996(var1);
             field_1179 = field_1179 + var2.method_995();
-            this.method_1299(new File(this.field_1180 + this.field_1181), class_170.field_1360);
-            var2.method_997(this.field_1180, class_170.field_1357);
+            this.method_1299(new File(this.field_1180 + this.field_1181), field_1360);
+            var2.method_997(this.field_1180, field_1357);
             var2.method_996(var1);
             field_1179 = field_1179 + var2.method_995();
         } else {
-            this.field_1180 = this.getFilesDir() + class_170.field_1354;
+            this.field_1180 = this.getFilesDir() + field_1354;
             var2 = new TessBaseAPI();
-            this.method_1299(new File(this.field_1180 + this.field_1181), class_170.field_1358);
-            var2.method_997(this.field_1180, class_170.field_1355);
+            this.method_1299(new File(this.field_1180 + this.field_1181), field_1358);
+            var2.method_997(this.field_1180, field_1355);
             var2.method_996(var1);
             field_1179 = var2.method_995().split("\n")[0];
-            this.method_1299(new File(this.field_1180 + this.field_1181), class_170.field_1359);
-            var2.method_997(this.field_1180, class_170.field_1356);
+            this.method_1299(new File(this.field_1180 + this.field_1181), field_1359);
+            var2.method_997(this.field_1180, field_1356);
             var2.method_996(var1);
             field_1179 = field_1179 + var2.method_995().split("\n")[0];
-            this.method_1299(new File(this.field_1180 + this.field_1181), class_170.field_1360);
-            var2.method_997(this.field_1180, class_170.field_1357);
+            this.method_1299(new File(this.field_1180 + this.field_1181), field_1360);
+            var2.method_997(this.field_1180, field_1357);
             var2.method_996(var1);
             field_1179 = field_1179 + var2.method_995().split("\n")[0];
         }
@@ -90,7 +100,7 @@ public class MainActivity extends Activity {
     private void method_1300(String var1) {
         try {
             StringBuilder var5 = new StringBuilder();
-            String var12 = var5.append(this.field_1180).append(this.field_1181).append(class_87.method_802(var1)).toString();
+            String var12 = var5.append(this.field_1180).append(this.field_1181).append(class_87.decode(var1)).toString();
             AssetManager var6 = this.getAssets();
             StringBuilder var7 = new StringBuilder();
             InputStream var9 = var6.open(var7.append(this.field_1181).append(var1).toString());
@@ -135,7 +145,7 @@ public class MainActivity extends Activity {
                 MainActivity.emailEditText = (EditText)MainActivity.this.findViewById(0x7f07002e);
                 MainActivity.serialEditText = (EditText)MainActivity.this.findViewById(0x7f070060);
                 MainActivity.this.method_1297();
-                if (!MainActivity.emailEditText.getText().toString().matches(class_170.field_1366) && !MainActivity.serialEditText.getText().toString().toUpperCase().matches(class_170.field_1366)) {
+                if (!MainActivity.emailEditText.getText().toString().matches("") && !MainActivity.serialEditText.getText().toString().toUpperCase().matches("")) {
                     if (class_46.method_502()) {
                         Toast.makeText(MainActivity.this, "Congratulations! You did it!", 1).show();
                     } else {
