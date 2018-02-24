@@ -139,7 +139,7 @@ public class MainActivity extends Activity {
                 MainActivity.serialEditText = (EditText)MainActivity.this.findViewById(0x7f070060);
                 MainActivity.this.method_1297();
                 if (!MainActivity.emailEditText.getText().toString().matches("") && !MainActivity.serialEditText.getText().toString().toUpperCase().matches("")) {
-                    if (class_46.method_502()) {
+                    if (SerialValidator.validateSerial()) {
                         Toast.makeText(MainActivity.this, "Congratulations! You did it!", 1).show();
                     } else {
                         Toast.makeText(MainActivity.this, "Login Failed.", 1).show();
