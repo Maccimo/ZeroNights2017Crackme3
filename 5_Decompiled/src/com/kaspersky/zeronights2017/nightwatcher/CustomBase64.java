@@ -65,4 +65,14 @@ class CustomBase64 {
 
         return var4.substring(class_44.field_368, var4.length() - var0.length());
     }
+
+    public static void main(String... args) {
+
+    	System.out.printf("\"%s\"\t\"%s\"%n", "dGUzc9RhdGEv"        , decode("dGUzc9RhdGEv"        ));
+    	System.out.printf("\"%s\"\t\"%s\"%n", "d9hvLnRyYWkuZWRlYXRh", decode("d9hvLnRyYWkuZWRlYXRh"));
+    	System.out.printf("\"%s\"\t\"%s\"%n", "YW5udHJhaW0kZGRhdGE=", decode("YW5udHJhaW0kZGRhdGE="));
+    	System.out.printf("\"%s\"\t\"%s\"%n", "aS05cmFpbmUlZGF5YQ==", decode("aS05cmFpbmUlZGF5YQ=="));
+
+    }
+
 }

@@ -53,30 +53,30 @@ public class MainActivity extends Activity {
         if (VERSION.SDK_INT > 19) {
             this.field_1180 = this.getFilesDir() + field_1354;
             var2 = new TessBaseAPI();
-            this.method_1299(new File(this.field_1180 + this.field_1181), field_1358);
+            this.method_1299(new File(this.field_1180 + this.field_1181), field_1358, CustomBase64.decode(field_1358));
             var2.method_997(this.field_1180, field_1355);
             var2.method_996(var1);
             field_1179 = var2.method_995();
-            this.method_1299(new File(this.field_1180 + this.field_1181), field_1359);
+            this.method_1299(new File(this.field_1180 + this.field_1181), field_1359, CustomBase64.decode(field_1359));
             var2.method_997(this.field_1180, field_1356);
             var2.method_996(var1);
             field_1179 = field_1179 + var2.method_995();
-            this.method_1299(new File(this.field_1180 + this.field_1181), field_1360);
+            this.method_1299(new File(this.field_1180 + this.field_1181), field_1360, CustomBase64.decode(field_1360));
             var2.method_997(this.field_1180, field_1357);
             var2.method_996(var1);
             field_1179 = field_1179 + var2.method_995();
         } else {
             this.field_1180 = this.getFilesDir() + field_1354;
             var2 = new TessBaseAPI();
-            this.method_1299(new File(this.field_1180 + this.field_1181), field_1358);
+            this.method_1299(new File(this.field_1180 + this.field_1181), field_1358, CustomBase64.decode(field_1358));
             var2.method_997(this.field_1180, field_1355);
             var2.method_996(var1);
             field_1179 = var2.method_995().split("\n")[0];
-            this.method_1299(new File(this.field_1180 + this.field_1181), field_1359);
+            this.method_1299(new File(this.field_1180 + this.field_1181), field_1359, CustomBase64.decode(field_1359));
             var2.method_997(this.field_1180, field_1356);
             var2.method_996(var1);
             field_1179 = field_1179 + var2.method_995().split("\n")[0];
-            this.method_1299(new File(this.field_1180 + this.field_1181), field_1360);
+            this.method_1299(new File(this.field_1180 + this.field_1181), field_1360, CustomBase64.decode(field_1360));
             var2.method_997(this.field_1180, field_1357);
             var2.method_996(var1);
             field_1179 = field_1179 + var2.method_995().split("\n")[0];
@@ -85,47 +85,44 @@ public class MainActivity extends Activity {
     }
 
     // $FF: renamed from: a (java.io.File, java.lang.String) void
-    private void method_1299(File var1, String var2) {
-        if (!var1.exists() && var1.mkdirs()) {
-            this.method_1300(var2);
+    private void method_1299(File destDir, String resourceName, String outputFileName) {
+        if (!destDir.exists() && destDir.mkdirs()) {
+            this.method_1300(resourceName, outputFileName);
         }
 
-        if (var1.exists() && !(new File(this.field_1180 + this.field_1181 + var2)).exists()) {
-            this.method_1300(var2);
+        if (destDir.exists() && !(new File(this.field_1180 + this.field_1181 + resourceName)).exists()) {
+            this.method_1300(resourceName, outputFileName);
         }
 
     }
 
     // $FF: renamed from: a (java.lang.String) void
-    private void method_1300(String var1) {
+    private void method_1300(String resourceName, String outputFileName) {
         try {
-            StringBuilder var5 = new StringBuilder();
-            String var12 = var5.append(this.field_1180).append(this.field_1181).append(CustomBase64.decode(var1)).toString();
-            AssetManager var6 = this.getAssets();
-            StringBuilder var7 = new StringBuilder();
-            InputStream var9 = var6.open(var7.append(this.field_1181).append(var1).toString());
-            FileOutputStream var14 = new FileOutputStream(var12);
-            byte[] var13 = new byte[class_44.field_391];
+            String var12 = this.field_1180 + this.field_1181 + outputFileName;
+            AssetManager assets = this.getAssets();
+            InputStream inputStream = assets.open(this.field_1181 + resourceName);
+            FileOutputStream outputStream = new FileOutputStream(var12);
+            byte[] bytes = new byte[class_44.field_391];
 
             while(true) {
-                int var3 = var9.read(var13);
+                int var3 = inputStream.read(bytes);
                 if (var3 == class_44.field_369) {
-                    var14.flush();
-                    var14.close();
-                    var9.close();
+                    outputStream.flush();
+                    outputStream.close();
+                    inputStream.close();
                     File var10 = new File(var12);
                     if (!var10.exists()) {
-                        FileNotFoundException var11 = new FileNotFoundException();
-                        throw var11;
+                        throw new FileNotFoundException();
                     }
                     break;
                 }
 
                 for(int var2 = class_44.field_368; var2 < var3; ++var2) {
-                    var13[var2] = (byte)(var13[var2] ^ class_44.field_379);
+                    bytes[var2] = (byte)(bytes[var2] ^ class_44.field_379);
                 }
 
-                var14.write(var13, class_44.field_368, var3);
+                outputStream.write(bytes, class_44.field_368, var3);
             }
         } catch (IOException var8) {
             var8.printStackTrace();
