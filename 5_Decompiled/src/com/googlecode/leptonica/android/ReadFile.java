@@ -16,7 +16,7 @@ public class ReadFile {
     }
 
     // $FF: renamed from: a (android.graphics.Bitmap) com.googlecode.leptonica.android.Pix
-    public static Pix method_1191(Bitmap var0) {
+    public static Pix readBitmap(Bitmap var0) {
         Object var3 = null;
         Pix var4;
         if (var0 == null) {

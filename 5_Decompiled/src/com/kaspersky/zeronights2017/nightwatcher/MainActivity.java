@@ -20,62 +20,73 @@ import java.io.InputStream;
 
 public class MainActivity extends Activity {
 
-    public static final String field_1354 = "/whoami/";
-    public static final String field_1355 = "who";
-    public static final String field_1356 = "am";
-    public static final String field_1357 = "i";
+    public static final String DIRNAME_WHOAMI = "/whoami/";
+    public static final String LANGANAME_WHO = "who";
+    public static final String LANGANAME_AM = "am";
+    public static final String LANGANAME_I = "i";
 
     // $FF: renamed from: a android.widget.EditText
     public static EditText emailEditText;
     // $FF: renamed from: b android.widget.EditText
     public static EditText serialEditText;
     // $FF: renamed from: c java.lang.String
-    public static String field_1179;
+    public static String SALT;
     // $FF: renamed from: d java.lang.String
-    private String field_1180;
+    private String dataPath;
     // $FF: renamed from: e java.lang.String
-    private final String field_1181;
+    private final String DIRNAME_TESSDATA;
 
     public MainActivity() {
-        this.field_1180 = "";
-        this.field_1181 = "tessdata/";
+        this.dataPath = "";
+        this.DIRNAME_TESSDATA = "tessdata/";
     }
 
     // $FF: renamed from: a () void
-    private void method_1297() {
+    private void computeSalt() {
         // 0x7f060062 = type="drawable" name="owl"
-        Bitmap var1 = BitmapFactory.decodeResource(this.getResources(), 0x7f060062);
-        TessBaseAPI var2;
+        Bitmap bitmap = BitmapFactory.decodeResource(this.getResources(), 0x7f060062);
+        TessBaseAPI tessBaseAPI;
+
         if (VERSION.SDK_INT > 19) {
-            this.field_1180 = this.getFilesDir() + field_1354;
-            var2 = new TessBaseAPI();
-            this.method_1299(new File(this.field_1180 + this.field_1181), "d9hvLnRyYWkuZWRlYXRh", "who.traineddata");
-            var2.method_997(this.field_1180, field_1355);
-            var2.method_996(var1);
-            field_1179 = var2.method_995();
-            this.method_1299(new File(this.field_1180 + this.field_1181), "YW5udHJhaW0kZGRhdGE=", "am.traineddata");
-            var2.method_997(this.field_1180, field_1356);
-            var2.method_996(var1);
-            field_1179 = field_1179 + var2.method_995();
-            this.method_1299(new File(this.field_1180 + this.field_1181), "aS05cmFpbmUlZGF5YQ==", "i.traineddata");
-            var2.method_997(this.field_1180, field_1357);
-            var2.method_996(var1);
-            field_1179 = field_1179 + var2.method_995();
+
+            this.dataPath = this.getFilesDir() + DIRNAME_WHOAMI;
+            tessBaseAPI = new TessBaseAPI();
+
+            this.method_1299(new File(this.dataPath + this.DIRNAME_TESSDATA), "d9hvLnRyYWkuZWRlYXRh", "who.traineddata");
+            tessBaseAPI.init(this.dataPath, LANGANAME_WHO);
+            tessBaseAPI.setImage(bitmap);
+            SALT = tessBaseAPI.getUTF8Text();
+
+            this.method_1299(new File(this.dataPath + this.DIRNAME_TESSDATA), "YW5udHJhaW0kZGRhdGE=", "am.traineddata");
+            tessBaseAPI.init(this.dataPath, LANGANAME_AM);
+            tessBaseAPI.setImage(bitmap);
+            SALT = SALT + tessBaseAPI.getUTF8Text();
+
+            this.method_1299(new File(this.dataPath + this.DIRNAME_TESSDATA), "aS05cmFpbmUlZGF5YQ==", "i.traineddata");
+            tessBaseAPI.init(this.dataPath, LANGANAME_I);
+            tessBaseAPI.setImage(bitmap);
+            SALT = SALT + tessBaseAPI.getUTF8Text();
+
         } else {
-            this.field_1180 = this.getFilesDir() + field_1354;
-            var2 = new TessBaseAPI();
-            this.method_1299(new File(this.field_1180 + this.field_1181), "d9hvLnRyYWkuZWRlYXRh", "who.traineddata");
-            var2.method_997(this.field_1180, field_1355);
-            var2.method_996(var1);
-            field_1179 = var2.method_995().split("\n")[0];
-            this.method_1299(new File(this.field_1180 + this.field_1181), "YW5udHJhaW0kZGRhdGE=", "am.traineddata");
-            var2.method_997(this.field_1180, field_1356);
-            var2.method_996(var1);
-            field_1179 = field_1179 + var2.method_995().split("\n")[0];
-            this.method_1299(new File(this.field_1180 + this.field_1181), "aS05cmFpbmUlZGF5YQ==", "i.traineddata");
-            var2.method_997(this.field_1180, field_1357);
-            var2.method_996(var1);
-            field_1179 = field_1179 + var2.method_995().split("\n")[0];
+
+            this.dataPath = this.getFilesDir() + DIRNAME_WHOAMI;
+            tessBaseAPI = new TessBaseAPI();
+
+            this.method_1299(new File(this.dataPath + this.DIRNAME_TESSDATA), "d9hvLnRyYWkuZWRlYXRh", "who.traineddata");
+            tessBaseAPI.init(this.dataPath, LANGANAME_WHO);
+            tessBaseAPI.setImage(bitmap);
+            SALT = tessBaseAPI.getUTF8Text().split("\n")[0];
+
+            this.method_1299(new File(this.dataPath + this.DIRNAME_TESSDATA), "YW5udHJhaW0kZGRhdGE=", "am.traineddata");
+            tessBaseAPI.init(this.dataPath, LANGANAME_AM);
+            tessBaseAPI.setImage(bitmap);
+            SALT = SALT + tessBaseAPI.getUTF8Text().split("\n")[0];
+
+            this.method_1299(new File(this.dataPath + this.DIRNAME_TESSDATA), "aS05cmFpbmUlZGF5YQ==", "i.traineddata");
+            tessBaseAPI.init(this.dataPath, LANGANAME_I);
+            tessBaseAPI.setImage(bitmap);
+            SALT = SALT + tessBaseAPI.getUTF8Text().split("\n")[0];
+
         }
 
     }
@@ -86,7 +97,7 @@ public class MainActivity extends Activity {
             this.method_1300(resourceName, outputFileName);
         }
 
-        if (destDir.exists() && !(new File(this.field_1180 + this.field_1181 + resourceName)).exists()) {
+        if (destDir.exists() && !(new File(this.dataPath + this.DIRNAME_TESSDATA + resourceName)).exists()) {
             this.method_1300(resourceName, outputFileName);
         }
 
@@ -95,9 +106,9 @@ public class MainActivity extends Activity {
     // $FF: renamed from: a (java.lang.String) void
     private void method_1300(String resourceName, String outputFileName) {
         try {
-            String var12 = this.field_1180 + this.field_1181 + outputFileName;
+            String var12 = this.dataPath + this.DIRNAME_TESSDATA + outputFileName;
             AssetManager assets = this.getAssets();
-            InputStream inputStream = assets.open(this.field_1181 + resourceName);
+            InputStream inputStream = assets.open(this.DIRNAME_TESSDATA + resourceName);
             FileOutputStream outputStream = new FileOutputStream(var12);
             byte[] bytes = new byte[8192];
 
@@ -137,7 +148,7 @@ public class MainActivity extends Activity {
             public void onClick(View var1) {
                 MainActivity.emailEditText = (EditText)MainActivity.this.findViewById(0x7f07002e);
                 MainActivity.serialEditText = (EditText)MainActivity.this.findViewById(0x7f070060);
-                MainActivity.this.method_1297();
+                MainActivity.this.computeSalt();
                 if (!MainActivity.emailEditText.getText().toString().matches("") && !MainActivity.serialEditText.getText().toString().toUpperCase().matches("")) {
                     if (SerialValidator.validateSerial()) {
                         Toast.makeText(MainActivity.this, "Congratulations! You did it!", 1).show();

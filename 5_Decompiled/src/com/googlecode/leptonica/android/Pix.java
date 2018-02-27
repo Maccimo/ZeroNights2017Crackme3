@@ -22,7 +22,7 @@ public class Pix {
     private static native void nativeDestroy(long var0);
 
     // $FF: renamed from: a () long
-    public long method_459() {
+    public long getNativePix() {
         if (this.field_365) {
             throw new IllegalStateException();
         } else {
@@ -45,7 +45,7 @@ public class Pix {
     }
 
     // $FF: renamed from: c () void
-    public void method_461() {
+    public void recycle() {
         if (!this.field_365) {
             nativeDestroy(this.field_364);
             this.field_365 = true;

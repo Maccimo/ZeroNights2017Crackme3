@@ -9,7 +9,7 @@ class SerialValidator {
         String serial = MainActivity.serialEditText.getText().toString().toUpperCase();
         String expectedSerial = class_135.method_1132(
             class_135.method_1133(
-                CustomBase64.encode(MainActivity.field_1179.getBytes()) + email
+                CustomBase64.encode(MainActivity.SALT.getBytes()) + email
             )
         );
 
